@@ -91,7 +91,6 @@ ul {
 
 /* Banner */
 #banner {
-  min-height: 400px;
   background: url('../img/apples1920x1280.jpg') no-repeat 0 -540px;
   text-align: center;
   color: var(--black);
@@ -144,17 +143,10 @@ ul {
 
 #services article {
   padding: 10px 20px 30px 20px;
-  float: left;
-  width: 75%;
 }
 
 #services article #videodiv {
   text-align: center;
-}
-
-#services aside {
-  float: right;
-  width: 20%;
 }
 
 /* Prices */
@@ -247,6 +239,7 @@ footer {
   #banner {
     background: url('../img/apples_mobile.jpg');
     margin-top: 30px;
+    min-height: 400px;
   }
 
   #services article {
