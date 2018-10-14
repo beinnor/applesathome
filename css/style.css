@@ -10,7 +10,9 @@
 }
 
 body {
-  font: 15px/1.5 Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
   padding: 0;
   margin: 0;
   background-color: var(--white);
@@ -24,8 +26,6 @@ body {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
 }
 
@@ -33,17 +33,14 @@ ul {
   height: 38px;
   background: var(--red);
   border: 0;
-  padding-left: 20px;
-  padding-right: 20px;
   color: var(--white);
+  margin: 5px;
+  padding: 5px;
 }
 
 .dark {
-  padding: 15px;
   background-color: var(--grey);
   color: var(--white);
-  margin-top: 10px;
-  margin-bottom: 10px;
   border-style: 1px solid var(--grey);
   border-radius: 5px;
 }
@@ -55,31 +52,33 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 0 15px 0;
   min-height: 70px;
   border-bottom: var(--red) 3px solid;
 }
 
 #header .container {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  margin: 5px 0 5px 5px;
+}
+
+#nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .nav-link {
   color: var(--red);
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.2rem;
+  text-transform: uppercase; 
 }
 
-#header li {
-  display: inline;
-  padding: 0 20px 0 20px;
-}
-
-#header-img {
+#header img {
   width: 40%;
   max-height: 70px;
 }
@@ -95,39 +94,38 @@ ul {
   text-align: center;
   color: var(--black);
   border-bottom: var(--red) 3px solid;
-  margin-top: 70px;
   min-height: 700px;
+  margin-top: 73px;
 }
 
-#banner h1 {
-  margin-top: 100px;
-  font-size: 55px;
-  margin-bottom: 10px;
-}
-
-#banner p {
-  font-size: 20px;
+#banner .container {
+  padding: 50px 20px 50px 20px;
 }
 
 /* Newsletter */
 #newsletter {
-  padding: 15px;
   color: var(--black);
   background: var(--white);  
   border-bottom: var(--red) 3px solid;
 }
 
-#newsletter h1 {
-  float: left;
+#newsletter .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
 }
 
 #newsletter form {
-  float: right;
-  margin-top: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
 }
 
-#newsletter input[type="email"] {
-  padding: 4px;
+#newsletter input[type="email"] {  
   height: 25px;
   width: 250px;
 }
@@ -138,11 +136,7 @@ ul {
 }
 
 #services .container {
-  padding: 50px 20px 100px 20px;
-}
-
-#services article {
-  padding: 10px 20px 30px 20px;
+  padding: 50px 20px 50px 20px;
 }
 
 #services article #videodiv {
@@ -150,8 +144,8 @@ ul {
 }
 
 /* Prices */
-#prices {
-  padding-bottom: 50px;
+#prices .container {
+  padding: 50px 20px 50px 20px;
 }
 
 .boxes {
@@ -176,80 +170,66 @@ ul {
   background-color: var(--light-gray);
   color: var(--red);
   border-bottom: 1px solid var(--red);
-  padding: 0px 5px 0px 5px;
 }
 
+.box h2 {
+  font-size: 1.1rem;
+} 
+
 .box .boxbody {
-  padding: 10px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   height: 100%;
-}
-
-.box ul {
-  padding-bottom: 10px;
+  font-size: 1rem;
 }
 
 /* Footer */
 footer {
   border-top: var(--red) 3px solid;
-  padding: 20px;
-  margin-top: 20px;
   color: var(--red);
   background-color: var(--white);
   text-align: center;
+  padding: 50px 20px 100px 20px;
 }
 
 
 /* Media Queries */
 @media(max-width: 768px) {
 
-  /* Header */
-  #header {
-    padding: 5px 0 5px 0;
-    min-height: 30px;
+  #header .container {
+    margin: 0;
+    margin: 3% 0 5px 5px;
   }
 
+  #banner {
+    background: none;
+    background-color: var(--white);
+    min-height: 0;
+  }
+
+}
+
+@media(max-width: 400px) {
+  
+  h1 {
+    font-size: 1.1rem;
+  }
+  
   #header .container {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-around;
     align-items: center;
-  }
-
-  nav {
-    width: 100%;
+    margin: 5% 0 5px 5px;
   }
 
   .nav-link {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
-  #header ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
+  #header img {
 
-  #header li {
-    padding: 0 5px 0 0;
-  }
-
-  /* Banner */
-  #banner {
-    background: url('../img/apples_mobile.jpg');
-    margin-top: 30px;
-    min-height: 400px;
-  }
-
-  #services article {
-    float: none;
   }
   
-  #services aside {
-    float: none;
-    width: 60%;
-    margin: auto;
-  }
-
 }
