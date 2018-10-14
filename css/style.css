@@ -1,0 +1,262 @@
+:root {
+  /* Color Palette */
+  --red: #a01c1cff;
+  --green: #819332ff;
+  --brown: #5c3e35ff;
+  --black: #111111;
+  --grey: #35424a;
+  --light-gray: #bbbbbb; 
+  --white: #f4f4f4;
+}
+
+body {
+  font: 15px/1.5 Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: var(--white);
+}
+
+/* Global */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.button1 {
+  height: 38px;
+  background: var(--red);
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--white);
+}
+
+.dark {
+  padding: 15px;
+  background-color: var(--grey);
+  color: var(--white);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: 1px solid var(--grey);
+  border-radius: 5px;
+}
+
+/* Header */
+#header {
+  background: var(--white);
+  color: var(--white);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0 15px 0;
+  min-height: 70px;
+  border-bottom: var(--red) 3px solid;
+}
+
+#header .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--red);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+#header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+#header-img {
+  width: 40%;
+  max-height: 70px;
+}
+
+.nav-link:hover {
+  color: var(--green);
+  font-weight: bold;
+}
+
+/* Banner */
+#banner {
+  min-height: 400px;
+  background: url('../img/apples1920x1280.jpg') no-repeat 0 -540px;
+  text-align: center;
+  color: var(--black);
+  border-bottom: var(--red) 3px solid;
+  margin-top: 70px;
+  min-height: 700px;
+}
+
+#banner h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#banner p {
+  font-size: 20px;
+}
+
+/* Newsletter */
+#newsletter {
+  padding: 15px;
+  color: var(--black);
+  background: var(--white);  
+  border-bottom: var(--red) 3px solid;
+}
+
+#newsletter h1 {
+  float: left;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter input[type="email"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+/* Services */
+#services {
+  border-bottom: var(--red) 3px solid;
+}
+
+#services .container {
+  padding: 50px 20px 100px 20px;
+}
+
+#services article {
+  padding: 10px 20px 30px 20px;
+  float: left;
+  width: 75%;
+}
+
+#services article #videodiv {
+  text-align: center;
+}
+
+#services aside {
+  float: right;
+  width: 20%;
+}
+
+/* Prices */
+#prices {
+  padding-bottom: 50px;
+}
+
+.boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.box {
+  border: 1px solid var(--red);
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  margin: 5px;
+  flex: 1 1 0;
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.box .boxheader {
+  background-color: var(--light-gray);
+  color: var(--red);
+  border-bottom: 1px solid var(--red);
+  padding: 0px 5px 0px 5px;
+}
+
+.box .boxbody {
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.box ul {
+  padding-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  border-top: var(--red) 3px solid;
+  padding: 20px;
+  margin-top: 20px;
+  color: var(--red);
+  background-color: var(--white);
+  text-align: center;
+}
+
+
+/* Media Queries */
+@media(max-width: 768px) {
+
+  /* Header */
+  #header {
+    padding: 5px 0 5px 0;
+    min-height: 30px;
+  }
+
+  #header .container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  #header ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  #header li {
+    padding: 0 5px 0 0;
+  }
+
+  /* Banner */
+  #banner {
+    background: url('../img/apples_mobile.jpg');
+    margin-top: 30px;
+  }
+
+  #services article {
+    float: none;
+  }
+  
+  #services aside {
+    float: none;
+    width: 60%;
+    margin: auto;
+  }
+
+}

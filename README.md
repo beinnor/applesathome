@@ -1,2 +1,2 @@
-# applesathome
-FCC Product Landing Page: Apples@Home
+# product-landing-page
+FCC - Responsive Web Design Projects
