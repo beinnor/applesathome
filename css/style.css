@@ -11,7 +11,7 @@
 
 body {
   font-family: Roboto, sans-serif;
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(10px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
   padding: 0;
   margin: 0;
@@ -164,6 +164,7 @@ ul {
   flex: 1 1 0;
   min-width: 200px;
   max-width: 200px;
+  box-shadow: 3px 3px var(--light-gray);
 }
 
 .box .boxheader {
